@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="Astro v4.9.1">
     <title>Cheick YAMBA: Site Personnel</title>
-    <link rel="icon" type="image/svg+xml" href="/portfolio.github.io/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap" rel="stylesheet">
+    
     <script>
         // This code is inlined in the head to make dark mode instant & blocking.
         const getThemePreference = () => {
@@ -30,42 +31,84 @@
             observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
         }
     </script>
-    <link rel="stylesheet" href="/portfolio.github.io/_astro/about.DPJUr4zN.css">
+    <link rel="stylesheet" href="/_astro/about.DPJUr4zN.css">
+    <link rel="stylesheet" href="path-to-your-global.css"> <!-- Replace with your actual CSS path -->
     <style>
-        /* Ajoute ton CSS personnalisé ici */
-        /* Styles existants */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hero img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+        .hero .text {
+            max-width: 45%;
+            padding-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero img, .hero .text {
+                max-width: 100%;
+                padding-left: 0;
+            }
+        }
     </style>
-    <script type="module">
-        addEventListener("load",()=>document.documentElement.classList.add("loaded"));
-        class i extends HTMLElement{constructor(){super(),this.appendChild(this.querySelector("template").content.cloneNode(!0));const t=this.querySelector("button"),e=document.getElementById("menu-content");e.hidden=!0,e.classList.add("menu-content");const n=s=>{t.setAttribute("aria-expanded",s?"true":"false"),e.hidden=!s};t.addEventListener("click",()=>n(e.hidden));const d=s=>{n(s.matches),t.hidden=s.matches},c=window.matchMedia("(min-width: 50em)");d(c),c.addEventListener("change",d)}}customElements.define("menu-button",i);
-        class a extends HTMLElement{constructor(){super();const t=this.querySelector("button"),e=n=>{document.documentElement.classList[n?"add":"remove"]("theme-dark"),t.setAttribute("aria-pressed",String(n))};t.addEventListener("click",()=>e(!this.isDark())),e(this.isDark())}isDark(){return document.documentElement.classList.contains("theme-dark")}}customElements.define("theme-toggle",a);
-    </script>
 </head>
 <body data-astro-cid-37fxchfa>
     <div class="stack backgrounds" data-astro-cid-37fxchfa>
         <nav data-astro-cid-dmqpwcec>
             <div class="menu-header" data-astro-cid-dmqpwcec>
-                <a href="/portfolio.github.io/" class="site-title" data-astro-cid-dmqpwcec>
+                <a href="/" class="site-title" data-astro-cid-dmqpwcec>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="url(#icon-gradient-1613nvle5)" fill="url(#icon-gradient-1613nvle5)" style="--size:1.6em" class="astro-patnjmll" data-astro-cid-patnjmll>
                         <g data-astro-cid-patnjmll>
-                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m80 96 40 32-40 32m56 0h40"/>
-                            <rect width="192" height="160" x="32" y="48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.97" rx="8.5"/>
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m80 96 40 32-40 32m56 0h40" />
+                            <rect width="192" height="160" x="32" y="48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.97" rx="8.5" />
                         </g>
                         <linearGradient id="icon-gradient-1613nvle5" x1="23" x2="235" y1="43" y2="202" gradientUnits="userSpaceOnUse" data-astro-cid-patnjmll>
                             <stop stop-color="var(--gradient-stop-1)" data-astro-cid-patnjmll></stop>
                             <stop offset=".5" stop-color="var(--gradient-stop-2)" data-astro-cid-patnjmll></stop>
                             <stop offset="1" stop-color="var(--gradient-stop-3)" data-astro-cid-patnjmll></stop>
                         </linearGradient>
-                    </svg> 
+                    </svg>
                     Cheick YAMBA
                 </a>
-                <!-- Rest of your navigation content -->
+                <menu-button data-astro-cid-dmqpwcec>
+                    <template data-astro-cid-dmqpwcec>
+                        <button class="menu-button" aria-expanded="false" data-astro-cid-dmqpwcec>
+                            <span class="sr-only" data-astro-cid-dmqpwcec>Menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll>
+                                <g data-astro-cid-patnjmll>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M40 128h176M40 64h176M40 192h176" />
+                                </g>
+                            </svg>
+                        </button>
+                    </template>
+                </menu-button>
             </div>
-            <!-- Rest of your menu content -->
+            <!-- Additional nav content -->
         </nav>
-        <!-- Rest of your content -->
+        <div class="stack gap-20 lg:gap-48" data-astro-cid-j7pv25f6>
+            <div class="wrapper stack gap-8 lg:gap-20" data-astro-cid-j7pv25f6>
+                <header class="hero" data-astro-cid-j7pv25f6>
+                    <div class="text" data-astro-cid-bbe6dxrz>
+                        <div class="stack gap-2" data-astro-cid-bbe6dxrz>
+                            <h1 class="title" data-astro-cid-bbe6dxrz>Hello, je m'appelle Cheick YAMBA</h1>
+                            <p class="tagline" data-astro-cid-bbe6dxrz>Je suis Developpeur Back-End, Developpeur Blockchaine, Ingenieur en Reseaux des Systemes de Telecommunication.</p>
+                        </div>
+                    </div>
+                    <img alt="Cheick YAMBA" src="/portfolio.github.io/assets/portrait.jpg" data-astro-cid-j7pv25f6>
+                </header>
+                <!-- Additional content -->
+            </div>
+        </div>
+        <!-- Footer content -->
     </div>
-    <img alt="Cheick YAMBA" width="480" height="620" src="/portfolio.github.io/assets/portrait.jpg" data-astro-cid-j7pv25f6>
-    <!-- Rest of your content -->
 </body>
 </html>
